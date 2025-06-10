@@ -14,13 +14,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "domains": ["zonely.space", "www.zonely.space"],
-  "redirects": [
-    {
-      "source": "https://www.zonely.space/:path*",
-      "destination": "https://zonely.space/:path*",
-      "permanent": true
-    }
   ]
 } 
