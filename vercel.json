@@ -11,6 +11,19 @@
     }
   ],
   "routes": [
+    {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zonely.space"
+        }
+      ],
+      "status": 301,
+      "headers": {
+        "Location": "https://zonely.space/$1"
+      }
+    },
     { "handle": "filesystem" },
     {
       "src": "/assets/(.*)",

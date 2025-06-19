@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { WorldClock } from '@/components/WorldClock';
@@ -8,6 +7,7 @@ import { MeetingPlanner } from '@/components/MeetingPlanner';
 import { Footer } from '@/components/Footer';
 import { CookieConsent } from '@/components/CookieConsent';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
   const [mounted, setMounted] = useState(false);
@@ -22,6 +22,16 @@ const Index = () => {
 
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>Zonely.space - World Clock, Time & Currency Converter</title>
+        <meta name="description" content="Convert time zones, check currency rates, and view world clocks. Perfect for travelers and businesses - easily convert time between cities and check currency rates in one place." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zonely.space" />
+        <meta property="og:title" content="Zonely.space - World Clock, Time & Currency Converter" />
+        <meta property="og:description" content="Convert time zones, check currency rates, and view world clocks. Perfect for travelers and businesses." />
+        <meta property="og:url" content="https://zonely.space" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         
