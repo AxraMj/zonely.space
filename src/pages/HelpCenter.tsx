@@ -1,4 +1,3 @@
-
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -77,19 +76,6 @@ const HelpCenter = () => {
                     </p>
                   </div>
                 </div>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold mb-4">Need More Help?</h2>
-                <p className="text-muted-foreground mb-4">
-                  Can't find what you're looking for? Our support team is here to help!
-                </p>
-                <a 
-                  href="mailto:support@zonely.space" 
-                  className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  Contact Support
-                </a>
               </section>
             </div>
           </div>
