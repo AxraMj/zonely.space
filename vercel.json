@@ -12,37 +12,28 @@
   ],
   "routes": [
     {
-      "src": "^/assets/(.*)",
-      "headers": { "cache-control": "public, max-age=31536000, immutable" },
-      "continue": true
-    },
-    {
-      "src": "^/(favicon.ico|robots.txt|sitemap.xml)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.zonely.space"
         }
       ],
-      "status": 301,
+      "permanent": true,
+      "destination": "https://zonely.space/:path*"
+    },
+    {
+      "source": "/assets/:path*",
       "headers": {
-        "Location": "https://zonely.space/$1",
-        "Cache-Control": "s-maxage=3600"
+        "cache-control": "public, max-age=31536000, immutable"
       }
     },
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
+      "source": "/(.*)",
       "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
+        "cache-control": "s-maxage=1, stale-while-revalidate"
       },
-      "dest": "/index.html"
+      "destination": "/index.html"
     }
   ]
 } 
