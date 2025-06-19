@@ -71,4 +71,4 @@ jobs:
       env:
         VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
       run: |
-        vercel deploy ./dist --token ${VERCEL_TOKEN} --prod --yes
+        vercel ./dist --token ${VERCEL_TOKEN} --prod --yes
