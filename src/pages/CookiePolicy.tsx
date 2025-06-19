@@ -1,11 +1,21 @@
-
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Helmet } from 'react-helmet-async';
 
 const CookiePolicy = () => {
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>Cookie Policy - Zonely.space</title>
+        <meta name="description" content="Learn about how Zonely.space uses cookies to enhance your experience with time zone conversions, currency rates, and site preferences." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zonely.space/cookie-policy" />
+        <meta property="og:title" content="Cookie Policy - Zonely.space" />
+        <meta property="og:description" content="Learn about how Zonely.space uses cookies to enhance your experience with time zone conversions and currency rates." />
+        <meta property="og:url" content="https://zonely.space/cookie-policy" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         

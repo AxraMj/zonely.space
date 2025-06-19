@@ -1,10 +1,21 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Helmet } from 'react-helmet-async';
 
 const HelpCenter = () => {
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>Help Center - Zonely.space</title>
+        <meta name="description" content="Get help with Zonely.space's time zone converter, world clock, currency converter, and meeting planner. Find answers to frequently asked questions." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zonely.space/help-center" />
+        <meta property="og:title" content="Help Center - Zonely.space" />
+        <meta property="og:description" content="Get help with Zonely.space's tools and find answers to frequently asked questions about our time and currency services." />
+        <meta property="og:url" content="https://zonely.space/help-center" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         

@@ -1,11 +1,21 @@
-
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Helmet } from 'react-helmet-async';
 
 const TermsOfService = () => {
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>Terms of Service - Zonely.space</title>
+        <meta name="description" content="Read our terms of service to understand your rights and responsibilities when using Zonely.space's time zone and currency conversion tools." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zonely.space/terms-of-service" />
+        <meta property="og:title" content="Terms of Service - Zonely.space" />
+        <meta property="og:description" content="Read our terms of service to understand your rights and responsibilities when using Zonely.space's tools." />
+        <meta property="og:url" content="https://zonely.space/terms-of-service" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         
