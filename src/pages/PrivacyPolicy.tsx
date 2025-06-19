@@ -1,11 +1,17 @@
-
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { Helmet } from 'react-helmet-async';
 
 const PrivacyPolicy = () => {
   return (
     <ThemeProvider>
+      <Helmet>
+        <title>Privacy Policy - Zonely.space</title>
+        <meta name="description" content="Learn about how Zonely.space collects, uses, and protects your personal information." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://zonely.space/privacy-policy" />
+      </Helmet>
       <div className="min-h-screen bg-background text-foreground">
         <Header />
         
