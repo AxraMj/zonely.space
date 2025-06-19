@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Cookie, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,6 +14,8 @@ export const CookieConsent = () => {
         setShowConsent(true);
       }, 2000);
       return () => clearTimeout(timer);
+    } else {
+      setShowConsent(false);
     }
   }, []);
 

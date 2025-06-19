@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Clock, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,8 +16,9 @@ export const TimeConverter = () => {
   // Set current time as default
   useEffect(() => {
     const now = new Date();
-    const currentTime = now.toTimeString().slice(0, 5); // Format: HH:MM
-    setFromTime(currentTime);
+    const utcHours = now.getUTCHours().toString().padStart(2, '0');
+    const utcMinutes = now.getUTCMinutes().toString().padStart(2, '0');
+    setFromTime(`${utcHours}:${utcMinutes}`);
   }, []);
 
   const getTimeForTimezone = (time: string, timezone: string) => {
@@ -171,8 +171,9 @@ export const TimeConverter = () => {
 
           {/* Time Input */}
           <div className="space-y-2">
-            <label className="text-sm font-medium">Time to convert</label>
+            <label htmlFor="time-input" className="text-sm font-medium">Time to convert</label>
             <input
+              id="time-input"
               type="time"
               value={fromTime}
               onChange={(e) => setFromTime(e.target.value)}

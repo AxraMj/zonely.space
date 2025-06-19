@@ -150,7 +150,7 @@ export const CurrencyConverter = () => {
         ZWL: 345,
       };
 
-      setTimeout(() => {
+      const timeoutId = setTimeout(() => {
         const fromRate = exchangeRates[fromCurrency] || 1;
         const toRate = exchangeRates[toCurrency] || 1;
         const inputAmount = parseFloat(amount) || 0;
@@ -164,10 +164,13 @@ export const CurrencyConverter = () => {
         setResult(convertedAmount.toFixed(2));
         setIsLoading(false);
       }, 100);
+
+      return () => clearTimeout(timeoutId);
     };
 
     if (amount && fromCurrency && toCurrency) {
-      calculateExchange();
+      const cleanup = calculateExchange();
+      return cleanup;
     }
   }, [amount, fromCurrency, toCurrency]);
 
