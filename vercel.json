@@ -16,6 +16,19 @@
       "destination": "/index.html"
     }
   ],
+  "redirects": [
+    {
+      "source": "/:path((?!well-known(?:/.*)?).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.zonely.space"
+        }
+      ],
+      "destination": "https://zonely.space/:path",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
