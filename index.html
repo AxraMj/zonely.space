@@ -25,7 +25,9 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zonely.space" />
-    <meta property="og:image" content="https://zonely.space/og-image.png" />
+    <meta property="og:image" content="https://zonely.space/Zonely_logo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -39,7 +41,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://zonely.space/twitter-image.png"
+      content="https://zonely.space/Zonely_logo.png"
     />
 
     <!-- Favicon -->
@@ -67,8 +69,28 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://zonely.space",
-        "logo": "https://zonely.space/favicon-32x32.png",
-        "name": "Zonely"
+        "logo": "https://zonely.space/Zonely_logo.png",
+        "name": "Zonely",
+        "description": "Convert time, currency, and view world clocks by continent at Zonely.space. Perfect for travelers and businesses!",
+        "sameAs": [
+          "https://zonely.space"
+        ]
+      }
+    </script>
+
+    <!-- ✅ WebSite Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Zonely.space",
+        "url": "https://zonely.space",
+        "description": "Convert time, currency, and view world clocks by continent at Zonely.space. Perfect for travelers and businesses!",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://zonely.space/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       }
     </script>
   </head>
